@@ -4,6 +4,39 @@
 	muted #aaa, rules #ddd, buttons #222. Zero border-radius throughout.
 */
 
+/* Static layout — panel JS removed, so panels stack and scroll instead
+   of hiding/showing. Panel-separation rules below are copied from
+   assets/css/noscript.css (previously only applied with JS disabled).
+   Nav's icon/tooltip CSS is untouched — it's pure :before/:hover, no JS
+   required — except the noscript.css rules that swapped icons for
+   permanent text labels, which are skipped: main.css already hides
+   those labels below 980px, so that combination leaves nav links with
+   neither icon nor label at narrow widths. */
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+
+	#main {
+		background: none;
+		box-shadow: none;
+	}
+
+		#main > .panel {
+			background: #ffffff;
+			margin-bottom: 2em;
+		}
+
+			#main > .panel:last-child {
+				margin-bottom: 0;
+			}
+
 /* Project list */
 
 	.projects {
