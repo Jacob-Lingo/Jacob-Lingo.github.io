@@ -1,0 +1,152 @@
+/*
+	Custom additions — project cards, chips, skills.
+	Palette derived from main.css: text #777, headings #363636,
+	muted #aaa, rules #ddd, buttons #222. Zero border-radius throughout.
+*/
+
+/* Project list */
+
+	.projects {
+		margin: 0 0 2em 0;
+	}
+
+		.project {
+			border-top: solid 1px #ddd;
+			padding: 1.5em 0 0 0;
+			margin: 0 0 1.5em 0;
+		}
+
+			.project:first-child {
+				border-top: 0;
+				padding-top: 0;
+			}
+
+			.project:last-child {
+				margin-bottom: 0;
+			}
+
+			.project h3 {
+				margin: 0 0 0.3em 0;
+			}
+
+			.project .meta {
+				display: block;
+				margin: 0 0 0.8em 0;
+				color: #aaa;
+				font-size: 0.65em;
+				line-height: 1.6em;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+			}
+
+			.project p {
+				margin: 0 0 0.8em 0;
+			}
+
+			.project ul {
+				margin: 0 0 1em 0;
+			}
+
+			.project .note {
+				color: #aaa;
+				font-size: 0.8em;
+				font-style: italic;
+			}
+
+/* Chips (shared by project stacks and skills) */
+
+	ul.chips {
+		list-style: none;
+		padding-left: 0;
+		margin: 0 0 0.5em 0;
+	}
+
+		ul.chips li {
+			display: inline-block;
+			padding: 0.1em 0.6em;
+			margin: 0 0.4em 0.4em 0;
+			border: solid 1px #ddd;
+			color: #777;
+			font-size: 0.68em;
+			line-height: 2em;
+			letter-spacing: 0.05em;
+			white-space: nowrap;
+		}
+
+/* Skills */
+
+	.skillset {
+		margin: 0 0 1.5em 0;
+	}
+
+		.skillset:last-child {
+			margin-bottom: 0;
+		}
+
+		.skillset h3 {
+			margin: 0 0 0.6em 0;
+			font-size: 0.7em;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			color: #aaa;
+		}
+
+	.education {
+		border-top: solid 1px #ddd;
+		padding: 1.5em 0 0 0;
+		margin: 2em 0 0 0;
+	}
+
+		.education ul {
+			list-style: none;
+			padding-left: 0;
+			margin: 0;
+		}
+
+			.education li {
+				padding-left: 0;
+				margin: 0 0 0.6em 0;
+				font-size: 0.85em;
+				line-height: 1.5em;
+			}
+
+				.education li:last-child {
+					margin-bottom: 0;
+				}
+
+			.education li span {
+				display: block;
+				color: #aaa;
+				font-size: 0.85em;
+			}
+
+/* Small screens: the base font drops to 12pt, so lift the label sizes
+   back to something readable rather than letting them scale down twice. */
+
+	@media screen and (max-width: 736px) {
+
+		.project .meta,
+		.skillset h3 {
+			font-size: 0.8em;
+			letter-spacing: 0.1em;
+		}
+
+		ul.chips li {
+			font-size: 0.8em;
+		}
+
+	}
+
+/* Keyboard focus (main.css sets outline:0 on links and buttons) */
+
+	#main a:focus-visible,
+	#nav a:focus-visible,
+	.button:focus-visible {
+		outline: solid 2px #363636;
+		outline-offset: 3px;
+	}
+
+	#nav a:focus-visible {
+		outline-color: #ffffff;
+		opacity: 1.0;
+	}
