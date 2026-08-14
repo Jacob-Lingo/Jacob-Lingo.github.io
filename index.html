@@ -4,12 +4,18 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
 		<title>Jacob Lingo | Computer Engineer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Jacob Lingo — computer engineer in Central Florida. Azure customer portal work at Mitsubishi Power, FPGA memory-security research at UCF, and self-hosted infrastructure." />
+		<meta property="og:title" content="Jacob Lingo | Computer Engineer" />
+		<meta property="og:description" content="Computer engineer working across hardware and software. Azure, .NET, React, FPGAs." />
+		<meta property="og:image" content="https://jacob-lingo.github.io/images/1761678239266.jpeg" />
+		<meta property="og:url" content="https://jacob-lingo.github.io/" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -25,8 +31,9 @@
 					<nav id="nav">
 						<a href="#" class="icon solid fa-home"><span>Home</span></a>
 						<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
+						<a href="#skills" class="icon solid fa-code"><span>Skills</span></a>
 						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-						<a href="https://www.linkedin.com/in/jacob-lingo/"target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span>LinkedIn</span></a>
+						<a href="https://www.linkedin.com/in/jacob-lingo/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span>LinkedIn</span></a>
 					</nav>
 
 				<!-- Main -->
@@ -38,14 +45,11 @@
 									<h1>Jacob Lingo</h1>
 									<h3>Computer Engineering</h3>
 									<p>
-
 										Hi! I'm Jacob Lingo. Currently working at Mitsubishi Power as a Digital Integration Engineer and pursuing my Master's Degree at UCF in Computer Engineering.
-										
 									</p>
 								</header>
 								<a href="#work" class="jumplink pic">
-									<!-- <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span> -->
-									<img src="images/1761678239266.jpeg" alt="" />
+									<img src="images/1761678239266.jpeg" alt="Jacob Lingo" />
 								</a>
 							</article>
 
@@ -54,10 +58,195 @@
 								<header>
 									<h2>My Work</h2>
 								</header>
+
 								<p>
-									Here, you'll find a comprehensive overview of my professional experience and projects in the field of computer engineering. With a strong foundation in both hardware and software development, I've had the privilege of contributing to various cutting-edge projects and teams. Below, you'll discover details about my roles, responsibilities, and key accomplishments, providing insights into my skills, expertise, and passion for innovation.
+									I work across hardware and software, and most of what I've built sits where the two meet. Right now that's an Azure-hosted customer portal at Mitsubishi Power &mdash; React and TypeScript on the front end, C# and ASP.NET Core behind it &mdash; where I own the architecture and roadmap and direct the vendor team building it with me. Before that: memory-security research on FPGAs at UCF, and eight years running audio and networks for live events. The four projects below cover that range. The resume is a download; this page is the faster version.
 								</p>
-								<embed src="images/Lingo_Jacob_Resume_final.pdf" width="100%" height="600px" type="application/pdf">
+
+								<ul class="actions">
+									<li><a href="images/Lingo_Jacob_Resume_final.pdf" class="button small">Resume (PDF)</a></li>
+									<li><a href="https://www.linkedin.com/in/jacob-lingo/" target="_blank" rel="noopener noreferrer" class="button small alt">LinkedIn</a></li>
+								</ul>
+
+								<div class="projects">
+
+									<!-- Project: Customer Portal -->
+										<section class="project">
+											<h3>Enterprise Customer Portal</h3>
+											<span class="meta">Digital Integration Engineer &middot; Mitsubishi Power Americas &middot; 2025&ndash;present</span>
+											<p>
+												An Azure-hosted portal serving 2,000+ users across 300+ power plants. I own it end to end &mdash; architecture, roadmap, and the direction of the external vendor team that builds it alongside me.
+											</p>
+											<ul>
+												<li>Write React/TypeScript changes against the front end, and trace reported defects through the C#/ASP.NET Core backend and SQL Server data layer to isolate root cause.</li>
+												<li>Run sprint planning, backlog prioritization, and release acceptance for the vendor engineering team.</li>
+												<li>Monitor production telemetry in Application Insights and triage issues across the application, database, and hosting layers.</li>
+											</ul>
+											<ul class="chips">
+												<li>React</li>
+												<li>TypeScript</li>
+												<li>C#</li>
+												<li>ASP.NET Core</li>
+												<li>SQL Server</li>
+												<li>Azure DevOps</li>
+												<li>Application Insights</li>
+											</ul>
+											<p class="note">Internal product &mdash; no public repository or screenshots.</p>
+										</section>
+
+									<!-- Project: RowHammer -->
+										<section class="project">
+											<h3>RowHammer Fault Injection on High Bandwidth Memory</h3>
+											<span class="meta">Graduate Research Assistant &middot; UCF Hardware Security &middot; 2024&ndash;2026</span>
+											<p>
+												RowHammer flips bits in DRAM by repeatedly activating adjacent rows. This work asked whether the same class of fault injection carries over to High Bandwidth Memory, which stacks and organizes DRAM differently.
+											</p>
+											<ul>
+												<li>Implemented custom memory access engines in SystemVerilog on a Xilinx Alveo U280 FPGA, targeting the on-package HBM stacks.</li>
+												<li>Characterized bit-flip behavior across DRAM access patterns and presented findings to faculty and peer researchers.</li>
+											</ul>
+											<ul class="chips">
+												<li>SystemVerilog</li>
+												<li>Vivado</li>
+												<li>Xilinx Alveo U280</li>
+												<li>FPGA</li>
+												<li>HBM</li>
+												<li>Hardware security</li>
+											</ul>
+										</section>
+
+									<!-- Project: Containment Failure -->
+										<section class="project">
+											<h3>Containment Failure</h3>
+											<span class="meta">Integration owner &amp; gameplay programmer &middot; 6-person team &middot; UCF, 2026</span>
+											<p>
+												A Unity game built by six developers, each contributing a different AI behavior system. I owned integration &mdash; getting six people's work into builds that actually ran &mdash; and wrote core gameplay systems.
+											</p>
+											<ul>
+												<li>Developed the player controller and the spawn director.</li>
+												<li>Merged contributions from six developers into working builds and managed delivery against the project deadline.</li>
+											</ul>
+											<ul class="chips">
+												<li>Unity</li>
+												<li>C#</li>
+												<li>Game AI</li>
+												<li>Systems integration</li>
+											</ul>
+										</section>
+
+									<!-- Project: Homelab -->
+										<section class="project">
+											<h3>Self-Hosted Infrastructure Lab</h3>
+											<span class="meta">Personal &middot; ongoing</span>
+											<p>
+												A Proxmox host running the services I'd otherwise rent, plus local LLM inference. Everything reachable from anywhere without opening a port to the internet.
+											</p>
+											<ul>
+												<li>Containerized services behind a Tailscale mesh: Home Assistant, Nextcloud, Jellyfin, Node-RED, and Ollama for local model inference.</li>
+												<li>Network-wide DNS filtering, reverse proxy, and scheduled backups.</li>
+											</ul>
+											<ul class="chips">
+												<li>Proxmox</li>
+												<li>Linux</li>
+												<li>Tailscale</li>
+												<li>Pi-hole</li>
+												<li>Ollama</li>
+												<li>Node-RED</li>
+												<li>Home Assistant</li>
+												<li>Nextcloud</li>
+											</ul>
+										</section>
+
+								</div>
+							</article>
+
+						<!-- Skills -->
+							<article id="skills" class="panel">
+								<header>
+									<h2>Skills</h2>
+								</header>
+
+								<div class="skillset">
+									<h3>Languages</h3>
+									<ul class="chips">
+										<li>TypeScript</li>
+										<li>JavaScript</li>
+										<li>C#</li>
+										<li>Python</li>
+										<li>SQL</li>
+										<li>C/C++</li>
+										<li>Java</li>
+										<li>SystemVerilog</li>
+									</ul>
+								</div>
+
+								<div class="skillset">
+									<h3>Web &amp; Backend</h3>
+									<ul class="chips">
+										<li>React</li>
+										<li>.NET / ASP.NET Core</li>
+										<li>REST APIs</li>
+										<li>SQL Server</li>
+										<li>HTML/CSS</li>
+									</ul>
+								</div>
+
+								<div class="skillset">
+									<h3>Cloud &amp; DevOps</h3>
+									<ul class="chips">
+										<li>Microsoft Azure</li>
+										<li>Azure DevOps</li>
+										<li>CI/CD pipelines</li>
+										<li>Entra ID</li>
+										<li>Application Insights</li>
+										<li>Git</li>
+										<li>Linux</li>
+									</ul>
+								</div>
+
+								<div class="skillset">
+									<h3>Hardware</h3>
+									<ul class="chips">
+										<li>FPGA</li>
+										<li>Vivado</li>
+										<li>Xilinx Alveo U280</li>
+										<li>Embedded systems</li>
+										<li>LabVIEW / TestStand</li>
+									</ul>
+								</div>
+
+								<div class="skillset">
+									<h3>Infrastructure</h3>
+									<ul class="chips">
+										<li>Proxmox</li>
+										<li>Tailscale</li>
+										<li>Pi-hole</li>
+										<li>Node-RED</li>
+										<li>Ollama</li>
+										<li>Home Assistant</li>
+										<li>Networking</li>
+									</ul>
+								</div>
+
+								<div class="skillset">
+									<h3>Practice</h3>
+									<ul class="chips">
+										<li>Agile/Scrum</li>
+										<li>Code review</li>
+										<li>Requirements analysis</li>
+										<li>Vendor management</li>
+										<li>Sinequa administration</li>
+										<li>Figma</li>
+									</ul>
+								</div>
+
+								<div class="education">
+									<ul>
+										<li>M.S. Computer Engineering &mdash; Intelligent Systems &amp; Machine Learning<span>University of Central Florida &middot; expected May 2028</span></li>
+										<li>B.S. Computer Engineering<span>University of Central Florida &middot; December 2024</span></li>
+										<li>A.S. Sound &amp; Music Technology<span>Valencia College &middot; 2017</span></li>
+									</ul>
+								</div>
 							</article>
 
 						<!-- Contact -->
@@ -89,13 +278,6 @@
 							</article>
 
 					</div>
-
-				<!-- Footer -->
-					<!-- <div id="footer">
-						<ul class="copyright">
-							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div> -->
 
 			</div>
 
